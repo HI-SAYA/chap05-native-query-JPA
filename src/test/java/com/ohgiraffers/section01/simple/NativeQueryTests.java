@@ -48,7 +48,7 @@ public class NativeQueryTests {
         String query = "SELECT MENU_CODE, MENU_NAME, MENU_PRICE, CATEGORY_CODE, ORDERABLE_STATUS" // jpql이 아니라 oracle에서 쓰는 문법 사용
                 + " FROM TBL_MENU WHERE MENU_CODE = ?"; // 물음표로 위치홀더 표시
         // String query = "SELECT MENU_CODE, MENU_NAME, MENU_PRICE" +
-        //        " FROM TBL_MENU WHERE MENU_CODE = ?";
+        //        " FROM TBL_MENU WHERE MENU_CODE = ?";ㅌ
         // ** 일부 컬럼만 불러와서 수행하는 것은 불가능하다. 무조건 전체 컬럼을 조회해야만 수행 가능하다. ??????????????????
         Query nativeQuery = entityManager.createNativeQuery(query, Menu.class)
                 // 영속성 컨텍스트에서 관리하는 객체가 맞다. -> 엔티티로 얻어오는 그 결과는 영속성 컨텍스트에서 관리하는 객체라고 말할 수 있다.
